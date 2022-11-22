@@ -1,0 +1,78 @@
+field,definition,observaciones
+uniprot_id,Uniprot_ID,
+uniprot_entry,entry name if uniprot,
+uniprot_protein_name,recomended name from uniprot,
+uniprot_protein_alternative,"all alternative names from Uniprot (including recommended, alternative and short name for clivages products)",
+uniprot_gene_names,[OLD] full list of uniprot names,
+uniprot_gene_name,gene name (first if many) from Uniprot,
+uniprot_gene_alternative,synonym gene names (and non-first gene names if many) from Uniprot ,
+length,protein length,
+amypro_category,amypro category (functional / non functional),
+mobi_th90_str_fraction,fraction of aa from structured that is present at 90% of the structures from mobidb,revisar si este nombre cuadra con lo que se quiere expresar
+mobi_th50_dis_fraction,"consensus of 50 % of predictors, disorder fraction, from mobi",
+mobi_missing_th90_dis_fraction,consensus of 90 % of sources of missing residues from mobi,
+mobi_iupl_dis_fraction,disorder fraction predicted with iupl from mobi,
+mobi_iups_dis_fraction,disorder fraction predicted with iups from mobi,
+mobi_low_complex_fraction,low complexity fraction extracted from mobi ,
+ch_rpkm_avg,expression level measured as average RPKM (Reads per kilo base per million mapped reads) from Chakraborty et al 2016,calculado el promedio por gustavo?
+ch_rpkm_std,expression level measured as standard deviation of RPKM (Reads per kilo base per million mapped reads) from Chakraborty et al 2016,calculado la std por gustavo?
+ch_rpkm_max,expression level measured as maximum RPKM (Reads per kilo base per million mapped reads) from Chakraborty et al 2016,calculado el max por gustavo?
+ch_expression_breadth,expression level measured as relative expression breadth (percentage of tissues in which a gene expression level is higher than one standard deviation from the mean) from Chakraborty et al 2016,calculado el porcentaje por gustavo?
+is_housekeeping,1 if expression breadth equals 100 (all ,
+dn_human_mouse,pairwaise human mouse  dn calculado con yn00,
+dn_human_5_sp,"evolutionary rate (dn) averged (macfa, pantr, ribe, cerat). Es el promedio human al resto de las especies. Calculado con yn00",
+ch_is_disease,if the proteins is involved in any d (not really usefull),
+dn_codeml,calculo del dN para todo el arbol con codelm. Es distinto de dn_human_mouse o dn promedio. Estos dos ultimos son pairwaise. El dn para el arbol es la distancia total del arbol en dN,
+max_fpkm,datos paper nico,
+dn7,número de sustituciones no sinónimas para 7 especies,
+ds7,número de sustituciones sinónimas para 7 especies,
+mean_fpkm,datos paper nico,
+rates prot 12 species,"12 especies 8011 proteinas, 5F+11patol. velocidades NO normalizadas, promediadas por longitud total proteina",
+rates prot 12 spcies corregido,"12 especies 8011 proteinas, 5F+11 patol. Velocidades NO normalizadas, pero promediadas en posiciones con MENOS de 75% de GAPS",
+PDB,Listas de PDB's de distintas proteinas sacadas de MOBIDB / encontradas x Blast (by juan) ,
+7 rates4site,"7 especies, 11789 proteinas, 37 amyloides corridos con rate4site",
+7 rate4site,Idem anterior pero excluyendo las posiciones que tienen mas de 2 gaps por posicion (2/7),
+Abundance,integrated dataset: weighted average of all H.sapiens WHOLE_ORGANISM datasets PAXDB,
+hippie_total_interactions,Interacciones totales para cada uniprot de la tabla. Datos obtenidos de: http://cbdm-01.zdv.uni-mainz.de/~mschaefer/hippie/download.php. Archivo: current release (v2.2)        last updated: 02/14/19HIPPIE current TAB ,
+hippie_total_chaperone,"Interacciones totales con chaperonas para cada uniprrot de la tabla. Los datos fueron obtenidos como en hippie total interations, pero asignando 1 si el interactos es una chaperona y 0 si no. Los datos de chaperonas son los que están presentes en la tabla que se baja de: https://www.uniprot.org/uniprot/?query=keyword:%22Chaperone%20%5BKW-0143%5D%22&fil=organism%3A%22Homo+sapiens+%28Human%29+%5B9606%5D%22+AND+reviewed%3Ayes",
+hippie_chaperone_ratio,(hippie_total_chaperone / hippie_total_interactions)*100,
+biogrid_total_interactions,Interacciones totales para cada uniprot de la tabla. Datos obtenidos de: https://downloads.thebiogrid.org/BioGRID/Release-Archive/BIOGRID-4.3.196/,"OJO!, la original para estos datos que están hoy subidos fueron obtenidos de la tabla   112.79 MBBIOGRID-ALL-4.3.196.tab3.zip, y la última release salió el 28/04/2021 momento en que comenzábamos con este análisis. "
+biogrid_total_chaperone,"Idem: hippie_total_chaperone, pero con el dataset de biogrid",
+biogrid_chaperone_ratio,"Idem: hippie_chaperone_ratio, pero con el dataset de biogrid",
+Clusters,Sequence clusters with > 30% identity and > 80% coverage in local alignments (CDHIT) [homologous],
+expr_len_dataset,A selected subset of Ref so the distribution of length and expression (ch_rpkm_avg) is identical between Ref and amyloids; there is only one Ref per sequence cluster. No Ref shares clusters with amyloids (non-homologous). Amyloids and Ref are also equal in terms of disorder (mobi_th50_dis_fraction).,
+TangolentotalAPR,suma de longuitud total de APR por ciento ,
+TangonumberAPR,numero de APR por proteina por ciento,
+is_chaperone,"column 1 if it's chaperone, 0 if it's not (based on chaperone_list table)",
+expr_len_dataset_ii,Other random generated with the same code of expr_len_dataset but with statistical differences between evolutionary rates,
+gene_id,NCBI Gene ID,
+chromosome,,
+gene_start,"start_position_on_the_genomic_accession (genomic coordinates, data/ncbi) ",
+gene_end,"end_position_on_the_genomic_accession (genomic coordinates, data/ncbi) ",
+orientation,strand,
+exon_number,number of exons in the gene,
+sequence_variants,"number of natural sequence variants at the residue level according to the UniProt data (both, normal and pathogenic variants)",
+gc_fraction,GC ratio in the CCDS,
+mean_alpha,"mean value: Alpha-helix indices (Geisow-Roberts, 1980)",
+mean_beta,"mean value: Beta-strand indices (Geisow-Roberts, 1980)",
+mean_mutability,"mean value: Relative mutability (Dayhoff et al., 1978b)",
+mean_hydropathy,"mean value: Hydropathy index (Kyte-Doolittle, 1982)",
+n_disulfide,Number of disulfide bonds (UniProt),
+location,Cellular location according to UniProt,
+amyloid_peptides,This column has the start and end UniProt coordinates for the longest peptide containing the longest amyloid region (for each amyloid region).,
+reconstruction analysis,1 if the protein was used in the ancestral reconstruction analysis and ddg calculation,
+plegamiento_funcional,Columnas específicas de cosas paper amy (),
+extra_amy_fuente,Columnas específicas de cosas paper amy (),
+característica_extra_amy,Columnas específicas de cosas paper amy (),
+gene_age,"Datos específicos de edades de los genes, base de datos : juan anota esto",
+Category_amy,https://docs.google.com/spreadsheets/d/1gz6Fgwjzg4FiCOODs9lg-5KZcg2entlHyyszb2dPUzw/edit#gid=0,Columnas utilizadas para el paper Mac Donagh Zea que no estaban aca! Falta agregar descrpcion y fuente
+dnMH,,Columnas utilizadas para el paper Mac Donagh Zea que no estaban aca! Falta agregar descrpcion y fuente
+dnBH,,Columnas utilizadas para el paper Mac Donagh Zea que no estaban aca! Falta agregar descrpcion y fuente
+dn7_amys,,Columnas utilizadas para el paper Mac Donagh Zea que no estaban aca! Falta agregar descrpcion y fuente
+RMSD100,,Columnas utilizadas para el paper Mac Donagh Zea que no estaban aca! Falta agregar descrpcion y fuente
+sigmau,,Columnas utilizadas para el paper Mac Donagh Zea que no estaban aca! Falta agregar descrpcion y fuente
+sigmaf,,Columnas utilizadas para el paper Mac Donagh Zea que no estaban aca! Falta agregar descrpcion y fuente
+Localization,,Columnas utilizadas para el paper Mac Donagh Zea que no estaban aca! Falta agregar descrpcion y fuente
+dS_data,,Columnas utilizadas para el paper Mac Donagh Zea que no estaban aca! Falta agregar descrpcion y fuente
+Gunfold,,Columnas utilizadas para el paper Mac Donagh Zea que no estaban aca! Falta agregar descrpcion y fuente
+Tm,,Columnas utilizadas para el paper Mac Donagh Zea que no estaban aca! Falta agregar descrpcion y fuente

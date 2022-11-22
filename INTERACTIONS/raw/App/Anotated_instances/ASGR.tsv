@@ -1,0 +1,4 @@
+node1	node2	node1_string_id	node2_string_id	homology	experimentally_determined_interaction	database_annotated	automated_textmining	combined_score
+ALB	ASGR1	9606.ENSP00000295897	9606.ENSP00000269299	0	0	0	0.647	0.647
+ASGR1	CERS2	9606.ENSP00000269299	9606.ENSP00000271688	0	0.314	0	0.279	0.484
+ASGR1	ASGR2	9606.ENSP00000269299	9606.ENSP00000347140	0	0	0.800	0.808	0.959

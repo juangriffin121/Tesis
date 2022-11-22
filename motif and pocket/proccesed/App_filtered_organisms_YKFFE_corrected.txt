@@ -1,0 +1,1 @@
+{"XP_031414630": "Clupea harengus", "XP_031414634": "Clupea harengus", "XP_048094658": "Alosa alosa", "XP_041935502": "Alosa sapidissima", "XP_041935508": "Alosa sapidissima", "KAI3365742": "Scortum barcoo", "RVE75397": "Oryzias javanicus", "XP_024150058": "Oryzias melastigma", "KAF6727044": "Oryzias melastigma", "KAF4119157": "Onychostoma macrolepis"}
